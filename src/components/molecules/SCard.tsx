@@ -1,6 +1,6 @@
-import LogoBadge from 'components/atoms/LogoBadge';
-import Trending from 'components/atoms/Trending';
-import styles from 'styles/components/molecules/SCard.module.scss'
+import LogoBadge from '@/components/atoms/LogoBadge';
+import Trending from '@/components/atoms/Trending';
+import styles from '@/styles/components/molecules/SCard.module.scss'
 
 const SCard = () => {
     return (

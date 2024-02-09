@@ -1,6 +1,6 @@
-import CreatorBadge from 'components/atoms/CreatorBadge'
+import CreatorBadge from '@/components/atoms/CreatorBadge'
 import React from 'react'
-import styles from 'styles/components/molecules/ReleaseCard.module.scss'
+import styles from '@/styles/components/molecules/ReleaseCard.module.scss'
 
 interface ReleaseCardProps {
     profilelink: string;

@@ -1,7 +1,5 @@
-// pages/css-demo.tsx
-
 import { useState } from 'react';
-import styles from '../../styles/components/molecules/CSS/CSSFlex.module.scss';
+import styles from '@/styles/components/molecules/CSS/CSSFlex.module.scss';
 import Head from 'next/head';
 
 const CSSFlex: React.FC = () => {

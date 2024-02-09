@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from 'styles/components/molecules/snippets/SubmitForm.module.scss'
-import Button from 'components/atoms/snippets/Button'
-import Input from 'components/atoms/snippets/Input'
+import Button from '@/components/atoms/snippets/Button'
+import Input from '@/components/atoms/snippets/Input'
 
 const SubmitForm = () => {
     return (

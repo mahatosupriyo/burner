@@ -1,7 +1,5 @@
-// pages/css-demo.tsx
-
 import { useState } from 'react';
-import styles from '../../styles/components/molecules/CSS/BoxModel.module.scss';
+import styles from '@/styles/components/molecules/CSS/BoxModel.module.scss';
 
 const BoxModel: React.FC = () => {
   const [content, setContent] = useState<number>(100);

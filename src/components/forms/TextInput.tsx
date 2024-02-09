@@ -1,6 +1,6 @@
 import { useFormContext, RegisterOptions } from "react-hook-form";
-import Field from "./Field"
-import Label from "./Label"
+import Field from "@/components/forms/Field"
+import Label from "@/components/forms/Label"
 
 type Props = {
   name: string;

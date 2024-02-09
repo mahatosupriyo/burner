@@ -1,7 +1,7 @@
 import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
-import TextInput from 'components/forms/TextInput';
-import TextAreaInput from 'components/forms/TextAreaInput';
-import SubmitInput from 'components/forms/SubmitInput';
+import TextInput from '@/components/forms/TextInput';
+import TextAreaInput from '@/components/forms/TextAreaInput';
+import SubmitInput from '@/components/forms/SubmitInput';
 import { Lesson } from "@prisma/client";
 
 export type Inputs = {
