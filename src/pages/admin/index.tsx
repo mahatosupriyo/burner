@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
-import { prisma } from 'utils/prisma';
+import { prisma } from '@/utils/prisma';
 import { useSession } from 'next-auth/react';
 import { GetServerSideProps } from 'next';
-import { authOptions } from 'pages/api/auth/[...nextauth]';
+import { authOptions } from "@/pages/api/auth/[...nextauth]"
 import { unstable_getServerSession } from 'next-auth/next';
 import type { Session } from 'next-auth';
 import type { Course, Lesson, Video } from '@prisma/client';
 import Link from 'next/link';
-import CourseGrid from 'components/CourseGrid';
-import Button from 'components/Button';
-import Heading from 'components/Heading';
+import CourseGrid from '@/components/CourseGrid';
+import Button from '@/components/Button';
+import Heading from '@/components/Heading';
 
 type AdminIndexPageProps = {
   session: Session;

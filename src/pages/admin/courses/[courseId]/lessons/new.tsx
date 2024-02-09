@@ -9,16 +9,16 @@ const { Video } = new Mux(process.env.MUX_TOKEN_ID, process.env.MUX_TOKEN_SECRET
 
 import MuxUploader from '@mux/mux-uploader-react';
 import { unstable_getServerSession } from "next-auth/next"
-import { authOptions } from 'pages/api/auth/[...nextauth]'
+import { authOptions } from '@/pages/api/auth/[...nextauth]'
 import type { Session } from 'next-auth'
 import { useMutation } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 
-import Heading from 'components/Heading';
-import TextInput from 'components/forms/TextInput';
-import TextAreaInput from 'components/forms/TextAreaInput';
-import Field from 'components/forms/Field';
-import SubmitInput from 'components/forms/SubmitInput';
+import Heading from '@/components/Heading';
+import TextInput from '@/components/forms/TextInput';
+import TextAreaInput from '@/components/forms/TextAreaInput';
+import Field from '@/components/forms/Field';
+import SubmitInput from '@/components/forms/SubmitInput';
 
 type Inputs = {
   name: string;

@@ -1,5 +1,5 @@
-import created from "./created"
-import ready from "./ready"
+import created from "@/utils/webhooks/mux/types/video/asset/created"
+import ready from "@/utils/webhooks/mux/types/video/asset/ready"
 
 const dict = { created, ready }
 

@@ -2,8 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import type { Readable } from 'node:stream';
 
 import Mux from '@mux/mux-node';
-
-import WEBHOOK_TYPES from "../../../utils/webhooks/mux/types"
+import WEBHOOK_TYPES from '@/utils/webhooks/mux/types'
 import get from "lodash.get"
 
 const webhookSecret = process.env.MUX_WEBHOOK_SECRET;

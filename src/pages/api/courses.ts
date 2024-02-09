@@ -1,8 +1,8 @@
-import { prisma } from 'utils/prisma'
+import { prisma } from '@/utils/prisma'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import type { Course } from '@prisma/client'
 import { unstable_getServerSession } from "next-auth/next"
-import { authOptions } from "./auth/[...nextauth]"
+import { authOptions } from "@/pages/api/auth/[...nextauth]"
 import slugify from '@sindresorhus/slugify';
 
 export default async function assetHandler(req: NextApiRequest, res: NextApiResponse<Course[] | Course>) {

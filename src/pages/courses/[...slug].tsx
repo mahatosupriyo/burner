@@ -1,19 +1,17 @@
-import type { ReactElement } from 'react'
-import { useState } from 'react'
-import type { GetServerSideProps } from 'next'
-import type { Course, Lesson, Video } from "@prisma/client"
+import { useState } from 'react';
+import type { GetServerSideProps, NextPage } from 'next';
+import type { Course, Lesson, Video } from "@prisma/client";
 import muxBlurHash from "@mux/blurhash";
-import { prisma } from 'utils/prisma'
-import { authOptions } from 'pages/api/auth/[...nextauth]'
-import { unstable_getServerSession } from "next-auth/next"
-import { useSession } from "next-auth/react"
-import Link from 'next/link'
-import type { NextPageWithLayout } from 'pages/_app'
-import CourseViewer from 'components/CourseViewer'
-import Nav from 'components/Nav'
-import Banner from 'components/Banner'
+import { prisma } from '@/utils/prisma';
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import { unstable_getServerSession } from "next-auth/next";
+import { useSession } from "next-auth/react";
+import Link from 'next/link';
 
-type VideoWithPlaceholder = Video & { placeholder?: string }
+import CourseViewer from '@/components/CourseViewer';
+import Banner from '@/components/Banner';
+
+type VideoWithPlaceholder = Video & { placeholder?: string };
 
 type ViewCoursePageProps = {
   course: (Course & {
@@ -22,14 +20,14 @@ type ViewCoursePageProps = {
     })[];
   });
   completedLessons: number[];
-}
+};
 
-const ViewCourse: NextPageWithLayout<ViewCoursePageProps> = ({ course, completedLessons }) => {
-  const { data: session } = useSession()
-  const [lessonProgress, setLessonProgress] = useState(completedLessons)
+const ViewCourse: NextPage<ViewCoursePageProps> = ({ course, completedLessons }) => {
+  const { data: session } = useSession();
+  const [lessonProgress, setLessonProgress] = useState(completedLessons);
 
   return (
-    <div style={{marginTop:100}}>
+    <div style={{ marginTop: 100 }}>
       {!session && (
         <Banner>
           <p className='text-center'>
@@ -41,24 +39,15 @@ const ViewCourse: NextPageWithLayout<ViewCoursePageProps> = ({ course, completed
       )}
       <CourseViewer course={course} lessonProgress={lessonProgress} setLessonProgress={setLessonProgress} />
     </div>
-  )
-}
+  );
+};
 
-ViewCourse.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <>
-      <Nav />
-      {page}
-    </>
-  )
-}
-
-export default ViewCourse
+export default ViewCourse;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const session = await unstable_getServerSession(context.req, context.res, authOptions)
+  const session = await unstable_getServerSession(context.req, context.res, authOptions);
 
-  const id = context?.query?.slug?.[0]
+  const id = context?.query?.slug?.[0];
   if (typeof id !== "string") { throw new Error('missing id') };
 
   const course = await prisma.course.findUnique({
@@ -70,14 +59,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         }
       }
     },
-  })
+  });
 
   if (!course) {
-    return { notFound: true }
+    return { notFound: true };
   }
 
   if (course.published === false && course.authorId !== session?.user?.id) {
-    return { notFound: true }
+    return { notFound: true };
   }
 
   const completedLessons = await prisma.userLessonProgress.findMany({
@@ -87,15 +76,15 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         in: course.lessons.map(lesson => lesson.id)
       }
     }
-  }).then(progress => progress.map(p => p.lessonId))
+  }).then(progress => progress.map(p => p.lessonId));
 
   course.lessons = await Promise.all(course.lessons.map(async (lesson) => {
     if (lesson?.video?.publicPlaybackId) {
       const { blurHashBase64 } = await muxBlurHash(lesson.video.publicPlaybackId);
       (lesson.video as VideoWithPlaceholder).placeholder = blurHashBase64;
     }
-    return lesson
-  }))
+    return lesson;
+  }));
 
   return {
     props: {
@@ -103,5 +92,5 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       course,
       completedLessons
     },
-  }
-}
+  };
+};

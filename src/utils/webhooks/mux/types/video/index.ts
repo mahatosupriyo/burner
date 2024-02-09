@@ -1,4 +1,4 @@
-import asset from "./asset"
+import asset from "@/utils/webhooks/mux/types/video/asset"
 
 const dict = { asset }
 
