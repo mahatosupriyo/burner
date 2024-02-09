@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import type { Course, Lesson, Video } from "@prisma/client"
-import Heading from 'components/Heading'
-import EmptyState from 'components/EmptyState'
+import Heading from '@/components/Heading'
+import EmptyState from '@/components/EmptyState'
 import MuxPlayer from "@mux/mux-player-react/lazy";
-import formatDuration from 'utils/formatDuration'
+import formatDuration from '@/utils/formatDuration'
 import clsx from 'clsx';
 import type { UserLessonProgress } from '@prisma/client'
 
@@ -32,7 +32,6 @@ const CourseViewer = ({ course, lessonProgress = [], setLessonProgress }: Props)
   useEffect(() => {
     const lessonIndex = course.lessons.findIndex(lesson => lesson.id === activeLesson.id) + 1
     router.push(`/courses/${course.id}/lessons/${lessonIndex}`, undefined, { shallow: true })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeLesson, course])
 
   const markLessonCompleted = async () => {

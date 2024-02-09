@@ -1,6 +1,6 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import type { Course, Lesson, Video } from "@prisma/client"
-import Heading from 'components/Heading'
+import Heading from '@/components/Heading'
 import ReactMarkdown from 'react-markdown'
 
 type Props = {

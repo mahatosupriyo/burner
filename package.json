@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mux/blurhash": "^0.1.2",
+    "@mux/mux-node": "^8.0.0",
+    "@mux/mux-player-react": "^2.3.2",
+    "@mux/mux-uploader-react": "^1.0.0-beta.15",
     "@next-auth/prisma-adapter": "^0.4.4-canary.81",
     "@prisma/client": "^5.9.1",
+    "@sindresorhus/slugify": "^2.2.1",
     "@studio-freight/lenis": "^1.0.34",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
@@ -19,6 +24,8 @@
     "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-textarea-autosize": "^8.5.3",
     "sass": "^1.70.0",
     "scss": "^0.2.4"
   },
