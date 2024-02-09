@@ -1,0 +1,30 @@
+
+    .CreatorBadge {
+        background: none;
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+
+        .BadgeContainer {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: center;
+            flex-direction: row;
+            gap: 0.2rem;
+            .Label {
+                font-family: Burner Font Bold;
+                font-size: 1.7rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 90%; /* 0.72rem */
+                letter-spacing: -0.06rem;
+
+            }
+        }
+    }
+

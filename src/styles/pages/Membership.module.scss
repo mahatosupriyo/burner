@@ -1,0 +1,161 @@
+@use "/src/styles/typography";
+@use "/src/styles/color";
+@import "/src/styles/typography";
+@import "/src/styles/color";
+
+.Wraper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #f2f0eb;
+    .Container{
+        width: 100%;
+        display: flex;
+        max-width: 180rem;
+    }
+}
+.Pricing {
+    width: 100%;
+    display: flex;
+    padding: 20rem 10rem;
+    width: 100%;
+    gap: 6rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $surface-primary;
+
+    .SectionHeading {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4rem;
+        color: #fff;
+        .Heading {
+            // color: #222;
+            @include Heading();
+        }
+    }
+
+    .membershipPlans {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+        .Plan {
+            border-radius: 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            padding: 2.8rem;
+            background-color: #FFF2E3;
+            backdrop-filter: blur(3px);
+
+            .Heading {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+
+                .Btn{
+                    text-decoration: none;
+                    @include HeadingMd();
+                    background-color: #222;
+                    
+                    color: #fff;
+                    padding: 2rem;
+                    border-radius: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .Head {
+                    font-family: Nyght Serif;
+
+                    line-height: 100%;
+                    font-size: 3rem;
+                    font-weight: 500;
+                    @include SubHeading();
+                    color: #222;
+                }
+
+                .Price {
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: row;
+                    gap: 0.2rem;
+
+                    .membershipPrice {
+                        line-height: 100%;
+                        display: flex;
+                        gap: 0.2rem;
+                        align-items: flex-start;
+                        flex-direction: row;
+                        font-family: Urbanist;
+                        font-size: 5rem;
+                        font-weight: 600;
+                        letter-spacing: -0.02rem;
+
+                        .RupeeSymbol {
+                            opacity: 0.6;
+                            height: 1.1rem;
+                        }
+                    }
+
+                    .PlanDuration {
+                        font-family: HK Grotesk Bold;
+                        font-size: 1.7rem;
+                        font-weight: 500;
+                        letter-spacing: -0.06rem;
+                        
+
+                    }
+                }
+            }
+
+            .Features {
+                display: flex;
+                flex-direction: column;
+                gap: 1.7rem;
+                letter-spacing: -0.02rem;
+                .Feature {
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    @include Description();
+                    color: #222;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        background-image: url("/bullet.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            // &:nth-child(2) {
+            //     background-color: #ffffff;
+            // }
+
+            &:nth-child(3) {
+                background-color: #fff;
+                border: 0.03rem solid #ffe5e5;
+            }
+        }
+    }
+}

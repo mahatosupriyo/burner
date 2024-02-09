@@ -1,0 +1,44 @@
+@use "/src/styles/color";
+@use "/src/styles/typography";
+@import "/src/styles/color";
+@import "/src/styles/typography";
+
+
+.Wraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $surface-primary;
+
+    .FAQContainer {
+        width: 100%;
+        max-width: 180rem;
+        display: flex;
+        gap: 4rem;
+        flex-direction: column;
+        padding: 10rem 6rem;
+        transition: 0.2s ease-in-out;
+        height: 100%;
+        background-color: $surface-primary;
+        .FAQs {
+            display: flex;
+            // gap: 1.7rem;
+            flex-direction: column;
+            transition: 0.2s ease-in-out;
+        }
+    
+        .HeadingContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .FAQHeading {
+                @include Heading();
+            }
+    
+            .FAQDescription {
+                @include Description();
+            }
+        }
+    }
+}

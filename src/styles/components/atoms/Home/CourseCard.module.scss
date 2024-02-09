@@ -1,0 +1,143 @@
+@mixin Smooth {
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.CourseCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    overflow: hidden;
+    min-width: 33rem;
+    max-width: 41.6rem;
+    @include Smooth();
+
+    &:hover{
+        box-shadow: 0 4px 60px rgba(0,0,0,.4);
+
+    }
+
+    
+    .Banner {
+        display: flex;
+        position: relative;
+        height: 100%;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        background-color: #000;
+        aspect-ratio: 16/9;
+
+        .BannerOverlay {
+            position: absolute;
+
+            padding: 2.2rem;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            .BannerTop {
+                display: flex;
+                justify-content: space-between;
+                .Category {
+                    font-family: Burner Font Bold;
+                    font-size: 1.7rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 90%; /* 0.72rem */
+                    letter-spacing: -0.06rem;
+                    color: #fff;
+                }
+            }
+        }
+        .BannerImage {
+            height: 20rem;
+            object-fit: contain;
+            aspect-ratio: 16/9;
+            user-select: none;
+        }
+    }
+
+    .CardDetails {
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.6rem;
+        background-color: #fff;
+
+        .CardTitle {
+            font-family: Burner Font Bold;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 90%; /* 0.72rem */
+            letter-spacing: -0.06rem;
+        }
+
+        .CardDescription {
+            font-family: Burner Font;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 90%; /* 0.72rem */
+            color: #767676;
+            letter-spacing: -0.04rem;
+        }
+
+        .CardFeatures {
+            display: flex;
+            gap: 0.3rem;
+            flex-direction: row;
+
+            max-width: 100%;
+            flex-wrap: wrap;
+            .Feature {
+                display: flex;
+                flex-shrink: 0;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 1.2rem 2.1rem 1.2rem 1.3rem;
+                border: 1px solid #dcccff;
+                border-radius: 5rem;
+                flex-wrap: wrap;
+
+                gap: 0.2rem;
+                color: #111;
+                font-family: Urbanist;
+                font-size: 1.3rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+            }
+
+
+        }
+
+        .Bottom {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            .Pricing {
+                color: #111;
+                font-family: Urbanist;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 90%;
+                letter-spacing: -0.04rem;
+                .PriceIcon {
+                    color: #111;
+                    font-family: Urbanist;
+                    font-size: 1.3rem;
+                    font-style: normal;
+                    font-weight: 200;
+                    line-height: 90%;
+                    letter-spacing: -0.026rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+[
+    {
+      "bannerurl": "https://i.ibb.co/CQL8GTT/Slide-16-9-13.png",
+      "cardtitle": "craft the reality",
+      "price": 4999,
+      "carddescription": "odyssey to master ux designing from scratch",
+      "cardcategory": "ux",
+      "username": "dtf",
+      "profilelink": "/",
+      "learners": 100,
+      "rating": 4.9,
+      "duration": 2
+    },
+    {
+      "bannerurl": "https://i.ibb.co/CQL8GTT/Slide-16-9-13.png",
+      "cardtitle": "craft the frontend",
+      "price": 2999,
+      "carddescription": "odyssey to master ux designing from scratch",
+      "cardcategory": "ux",
+      "username": "dtf",
+      "profilelink": "/",
+      "learners": 150,
+      "rating": 5,
+      "duration": 4
+    },
+    {
+      "bannerurl": "https://i.ibb.co/CQL8GTT/Slide-16-9-13.png",
+      "cardtitle": "craft the frontend",
+      "price": 2999,
+      "carddescription": "odyssey to master ux designing from scratch",
+      "cardcategory": "ux",
+      "username": "dtf",
+      "profilelink": "/",
+      "learners": 150,
+      "rating": 5,
+      "duration": 4
+    }
+  ]
+  

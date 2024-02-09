@@ -1,0 +1,23 @@
+.Button {
+    padding: 2rem;
+    font-family: Burner Font;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.6rem;
+
+    display: flex;
+    width: 100%;
+    padding: 1.66rem 10rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 2.4rem;
+    letter-spacing: -0.06rem;
+    background-color: #0D32F5;
+    transition: 0.2s ease-in-out;
+
+
+    &:hover{
+        background-color: #2d50ff;
+    }
+}

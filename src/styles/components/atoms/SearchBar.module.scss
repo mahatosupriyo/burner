@@ -1,0 +1,32 @@
+.SearchBar {
+    display: flex;
+    padding: 1.5rem 1.4rem;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+    width: 100%;
+    flex: 1 1 auto;
+
+    font-style: normal;
+
+    letter-spacing: -0.06rem;
+    color: #858585;
+    backdrop-filter: blur(20px);
+
+    background: #161717;
+    border-radius: 1.8rem;
+
+    transition: 0.2s ease-in-out;
+    &:hover{
+        background-color: #1B1B1B;
+    }
+    .SearchIcon {
+        height: 2.4rem;
+        fill: #111;
+    }
+
+    user-select: none;
+    font-family: Space Grotesk;
+    font-weight: 500;
+    font-size: 1.6rem;
+}

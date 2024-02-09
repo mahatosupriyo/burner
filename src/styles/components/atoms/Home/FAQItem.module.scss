@@ -1,0 +1,23 @@
+@use "/src/styles/color";
+@use "/src/styles/typography";
+@import "/src/styles/color";
+@import "/src/styles/typography";
+
+.FAQItem {
+    cursor: pointer;
+    overflow: visible;
+    height: 100%;
+    border-top: 0.03rem solid lightgrey;
+    border-top-style: dashed;
+    padding: 1rem 0rem;
+
+    .FAQuestion {
+        @include HeadingMd();
+        padding: 1rem 0rem;
+    }
+    .FAQAnswer {
+        @include DescriptionMd();
+        padding: 1rem 0rem;
+        transition: all 0.2s ease-in-out;
+    }
+}

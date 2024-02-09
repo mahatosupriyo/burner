@@ -1,0 +1,76 @@
+@use "/src/styles/color";
+@use "/src/styles/typography";
+@import "/src/styles/color";
+@import "/src/styles/typography";
+
+.toggleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+  color: #222;
+}
+
+.toggleText {
+  letter-spacing: 0rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 100%;
+  font-family: HK Grotesk Bold;
+  letter-spacing: -0.04rem;
+  font-weight: 700;
+
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  color: #222;
+  gap: 1rem;
+}
+
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  height:3.4rem;
+}
+
+.toggleInput {
+  display: none;
+}
+
+.toggleSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $burner-theme-one;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.toggleInput:checked + .toggleSlider {
+  background-color: $surface-secondary;
+}
+
+.toggleSlider:before {
+  position: absolute;
+  content: "";
+  height: 2.8rem;
+  width: 2.8rem;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggleInput:checked + .toggleSlider:before {
+  transform: translateX(26px);
+}

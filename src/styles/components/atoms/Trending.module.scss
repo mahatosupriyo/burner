@@ -1,0 +1,26 @@
+.TrendingBadge{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50rem;
+    padding: 0.5rem;
+    position: relative;
+
+    .TrendingLogo{
+        position: absolute;
+    }
+    .circularMotion{
+        position: relative;
+        animation: rotate 4s linear infinite; 
+    }
+
+    @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+}

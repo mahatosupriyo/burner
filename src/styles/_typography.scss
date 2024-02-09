@@ -1,0 +1,75 @@
+@mixin SubHeading {
+    letter-spacing: 0rem;
+    font-weight: 500;
+    font-size: 2rem;
+    // font-size: 5rem;
+    line-height: 130%;
+    // text-transform: lowercase;
+    font-family: Nyght Serif Medium;
+    font-family: HK Grotesk Bold;
+    letter-spacing: -0.02rem;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.SubHeading {
+    @include SubHeading();
+}
+
+@mixin Heading {
+    letter-spacing: 0rem;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 130%;
+    font-family: HK Grotesk Bold;
+    letter-spacing: -0.1rem;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.Heading {
+    @include Heading();
+}
+
+@mixin HeadingMd {
+    letter-spacing: 0rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
+    font-family: HK Grotesk SemiBold;
+    // letter-spacing: -0.04rem;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.HeadingMd {
+    @include HeadingMd();
+}
+
+@mixin DescriptionMd {
+    letter-spacing: 0rem;
+    font-size: 1.4rem;
+    line-height: 100%;
+    font-family: HK Grotesk Regular;
+    letter-spacing: -0.02rem;
+    font-weight: 400;
+    color: #86868b;
+}
+
+.DescriptionMd {
+    @include DescriptionMd();
+}
+
+@mixin Description {
+    letter-spacing: 0rem;
+    font-size: 1.6rem;
+    line-height: 130%;
+    font-family: HK Grotesk Regular;
+    letter-spacing: -0.02rem;
+    font-weight: 400;
+    color: #86868b;
+}
+
+.Description {
+    @include Description();
+}

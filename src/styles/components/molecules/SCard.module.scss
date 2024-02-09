@@ -1,0 +1,75 @@
+@mixin Smooth {
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.SCard {
+    display: flex;
+    height: 34rem;
+    width: 34rem;
+    min-width: 34rem;
+    background-color: #ebe6d2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem;
+
+    overflow: hidden;
+    gap: 4.4rem;
+    border-radius: 2rem;
+
+    cursor: pointer;
+    user-select: none;
+
+    border: 0.4rem solid transparent;
+
+    // @include Smooth();
+
+    transition: 0.4s ease-in-out;
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+    }
+
+    &:hover {
+        border: 0.4rem solid #f4f0e3;
+        gap: 1rem;
+        box-shadow: 0 4px 60px #ebe6d291;
+
+        .CardBanner {
+            transform: translateY(-0.6rem);
+        }
+    }
+    .Top {
+        width: 100%;
+        display: flex;
+        position: relative;
+
+        .TrendBadge {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .CardBanner {
+        width: 100%;
+        object-fit: contain;
+        user-select: none;
+
+        @include Smooth();
+
+        @media screen and (max-width: 1000px) {
+            height: 22rem;
+        }
+    }
+    .CardLabel {
+        font-family: Burner Font Bold;
+
+        color: #0f1012;
+
+        font-size: 3rem;
+        font-style: normal;
+        line-height: 90%;
+        font-weight: 600;
+        letter-spacing: -0.18rem;
+    }
+}

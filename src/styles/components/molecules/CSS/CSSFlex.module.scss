@@ -1,0 +1,120 @@
+/* css-demo.module.scss */
+
+.Code {
+    font-family: Burner Font Bold;
+    letter-spacing: -0.02rem;
+
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 160%;
+    display: none;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 3rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    font-family: Burner Font;
+    text-transform: lowercase;
+    letter-spacing: -0.01rem;
+
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 0rem 3rem 0rem 0rem;
+
+    background-color: #fff;
+
+    transition: 0.3s ease-in-out;
+
+    .FlexContainer {
+        display: flex;
+        border: 0.3rem solid #f1f1f1;
+        background-color: #f5f5f5;
+        border-radius: 3rem;
+        gap: 1rem;
+        height: 50rem;
+        width: 100%;
+        flex-wrap: nowrap;
+        padding: 2rem;
+
+        .box {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Burner Font;
+            letter-spacing: -0.01rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            user-select: none;
+        }
+    }
+
+    .controls {
+        display: flex;
+        align-items: flex-start;
+        width: 40rem;
+        gap: 2rem;
+        flex-direction: column;
+
+        .DropDown {
+            font-weight: 600;
+            margin-right: 20px;
+            overflow: -moz-hidden-unscrollable;
+
+            font-family: Burner Font Bold;
+            letter-spacing: -0.08rem;
+            font-size: 1.7rem;
+            font-weight: 600;
+            width: 40rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            .Select {
+                width: 20rem;
+
+                cursor: pointer;
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: none;
+                outline: none;
+                border: none;
+                font-family: Burner Font Bold;
+                text-transform: lowercase;
+                font-size: 1.7rem;
+                padding: 2rem 4rem 2rem 2rem;
+                font-weight: 600;
+                letter-spacing: -0.08rem;
+                border-radius: 1rem;
+                border: 0.03rem solid transparent;
+
+                background-color: #ebebeb;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                box-shadow: none;
+                &:focus {
+                    outline: none;
+                    border: 0.03 solid transparent;
+                }
+
+                option {
+                    border: 0.3px solid transparent;
+                    outline: none;
+                    background-color: #fff;
+                    &:hover {
+                        background-color: #111;
+                    }
+                }
+            }
+        }
+    }
+}

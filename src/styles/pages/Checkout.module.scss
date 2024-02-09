@@ -1,0 +1,175 @@
+@use "/src/styles/color";
+@use "/src/styles/typography";
+@import "/src/styles/color";
+@import "/src/styles/typography";
+
+.Wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $surface-primary;
+    .Container {
+        width: 100%;
+        display: flex;
+        max-width: 180rem;
+        flex-direction: column;
+
+
+    }
+}
+
+.AddressButton {
+    cursor: pointer;
+    padding: 3.4rem;
+    border-radius: 1rem;
+    @include HeadingMd();
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .AddButton {
+        height: 1.5rem;
+        width: 1.5rem;
+        user-select: none;
+        overflow: visible;
+    }
+}
+
+.Checkout {
+    width: 100%;
+    display: flex;
+    padding: 15rem 6rem;
+    width: 100%;
+    gap: 4rem;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    // background-image: url("https://images.unsplash.com/photo-1671129731764-139220e6a5da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $surface-primary;
+
+    .CheckOutSubContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 4rem;
+        width: 100%;
+
+        .ReviewContainer{
+            width: 100%;
+            max-width: 40rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+
+            .PayButton{
+                padding: 2rem;
+                width: 100%;
+                border-radius: 1rem;
+                background-color: #f2f2f2;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                @include SubHeading();
+                font-size: 1.7rem;
+                outline: none;
+                cursor: pointer;
+                .GpayIcon{
+                    height: 2rem;
+                }
+            }
+
+
+            .CheckoutWraper{
+                display: flex;
+                flex-direction: column;
+                padding: 4rem;
+                background-color: #222;
+                border-radius: 1rem;
+                .TitleContainer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7rem;
+                    .SubHeading {
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        gap: 4rem;
+                        color: #fff;
+                    }
+                }
+            }
+
+
+        }
+
+
+        .Product {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            flex-wrap: nowrap;
+            .HeadingContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                width: 100%;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}
+
+.Plans {
+    display: flex;
+
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: nowrap;
+    // max-width: 70rem;
+
+    .OptionCard {
+        display: flex;
+        cursor: pointer;
+        border-radius: 1rem;
+        padding: 3rem;
+        background-color: #f2efef;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        flex-wrap: nowrap;
+
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #f0e9e9;
+        }
+
+        .RadioButton {
+            accent-color: #232323;
+        }
+
+        .CardDetails {
+            width: 100%;
+            display: flex;
+            text-wrap: nowrap;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            flex-direction: column;
+        }
+    }
+}

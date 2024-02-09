@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next-auth/prisma-adapter": "^0.4.4-canary.81",
+    "@prisma/client": "^5.9.1",
+    "@studio-freight/lenis": "^1.0.34",
+    "classnames": "^2.5.1",
+    "framer-motion": "^11.0.3",
+    "next": "14.1.0",
+    "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "sass": "^1.70.0",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "prisma": "^5.9.1",
+    "typescript": "^5"
   }
 }

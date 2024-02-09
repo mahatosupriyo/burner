@@ -1,0 +1,45 @@
+@mixin Smooth {
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.ReleaseCard {
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    align-items: center;
+    gap: 1rem;
+    min-width: 25rem;
+    background-color: #f5f2e7;
+    padding: 1.2rem;
+
+    border-radius: 2.6rem;
+    cursor: pointer;
+    @include Smooth();
+
+    &:hover {
+        background-color: #ebe6d2;
+    }
+
+    .CardBanner {
+        height: 2.6rem;
+        border-radius: 10rem;
+        object-fit: cover;
+        user-select: none;
+    }
+
+    .CardDetails {
+        display: flex;
+        gap: 0.8rem;
+        flex-direction: column;
+        .ReleaseTitle {
+            color: #787878;
+            font-family: Burner Font Bold;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 90%; /* 1.176rem */
+            letter-spacing: -0.04rem;
+            display: none;
+        }
+    }
+}
